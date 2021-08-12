@@ -32,7 +32,7 @@ const getName = () => makeRandomText(Math.ceil(Math.random() * 10) + 5)
 const getDescription = () => makeRandomText(Math.ceil(Math.random() * 25) + 15)
 
 onMounted(() => {
-  const arrayInit = (new Array(1000)).fill().map((i, index) => ({
+  const arrayInit = (new Array(3000)).fill().map((i, index) => ({
     id: index,
     name: getName(),
     description: getDescription(),
@@ -43,7 +43,7 @@ onMounted(() => {
 })
 
 function changeRandom() {
-  const id = Math.floor(Math.random() * 1000)
+  const id = Math.floor(Math.random() * 50)
 
   itemStore.updateItem({
     id,
